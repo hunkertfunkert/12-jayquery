@@ -1,0 +1,79 @@
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .profile-card {
+    width: 300px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-header {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 80%;
+    transition: filter 0.3s ease;
+  }
+  
+  .profile-name {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  
+  .profile-bio {
+    font-size: 1em;
+    color: #555;
+    display: block;
+    max-height: 3em;
+    overflow: hidden;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    position: relative;
+  }
+  
+  .profile-bio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1em;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  }
+  .profile-bio.visible {
+    opacity: 1;
+    max-height: 1000px; 
+  }
+  .profile-bio.expanded::after {
+    display: none;
+  }
+  
+  
+  button.toggle-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  button.toggle-btn:hover {
+    background-color: #0056b3;
+  }
+  
